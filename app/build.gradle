@@ -1,0 +1,42 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+  id 'com.squareup.anvil'
+}
+
+dependencies {
+  implementation "androidx.compose.runtime:runtime:1.1.1"
+
+  compileOnly "com.google.dagger:dagger:2.38"
+  anvil       "io.github.infotech-group:anvil-extensions:1.0.1"
+  compileOnly "io.github.infotech-group:anvil-extensions-annotations:1.0.1"
+}
+
+anvil {
+  generateDaggerFactories.set(true)
+}
+
+//android {
+//  buildFeatures.compose true
+//  composeOptions.kotlinCompilerExtensionVersion compose_version
+//}
+
+
+
+android {
+  compileSdk 31
+  defaultConfig {
+    minSdk 23
+    targetSdk 31
+    versionCode 1
+    versionName "1.0"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+}
