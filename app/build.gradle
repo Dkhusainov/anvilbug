@@ -5,23 +5,13 @@ plugins {
 }
 
 dependencies {
-  implementation "androidx.compose.runtime:runtime:1.1.1"
-
   compileOnly "com.google.dagger:dagger:2.38"
-  anvil       "io.github.infotech-group:anvil-extensions:1.0.1"
-  compileOnly "io.github.infotech-group:anvil-extensions-annotations:1.0.1"
+  implementation "androidx.compose.runtime:runtime:1.1.1"
 }
 
 anvil {
   generateDaggerFactories.set(true)
 }
-
-//android {
-//  buildFeatures.compose true
-//  composeOptions.kotlinCompilerExtensionVersion compose_version
-//}
-
-
 
 android {
   compileSdk 31
