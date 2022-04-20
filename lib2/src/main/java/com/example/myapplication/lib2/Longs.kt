@@ -14,7 +14,9 @@ abstract class LongsModule {
 class Longs @Inject constructor(
   private val longs: Set<Long>
 ) {
+
+  @Suppress("UNUSED_EXPRESSION")
   fun b() {
-    14
+    6512
   }
 }
